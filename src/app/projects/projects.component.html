@@ -1,0 +1,78 @@
+<div class="project" id="project" #project>
+    <div class="title" id="titleProject">
+        <a>
+            PROJECTS
+        </a>
+    </div>
+    <div class="projectWrapper">
+
+        <div class="navProject">
+            <div>
+                ALL
+            </div>
+            <div>
+                TYPESCRIPT
+            </div>
+            <div>
+                PLAYAROUND
+            </div>
+        </div>
+
+        <div class="modal" #modal>
+            <div class="carouselWrapper">
+                <!-- You can now use your library component in app.component.html -->
+                <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
+                    (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+                    (beforeChange)="beforeChange($event)">
+                    <div ngxSlickItem *ngFor="let slide of this.arrayProject[0].img" class="slide">
+                        <img src={{slide}} alt="" height="100%" width="100%" >
+                    </div>
+                </ngx-slick-carousel>
+                <div class="textWrapper">
+
+                    <div class="titleCrl">
+                        Titre 1
+                    </div>
+                    <div class="subtitleCrl">
+                        SousTitre 1
+                    </div>
+                    <div class="textCrl">
+                        Some random loremp foezjpz^jf ozjfo
+                        fpzfkpzfkzpfok
+                        fzp^fkpo
+                    </div>
+    
+                    <div class="webSiteCrl">
+                        VIEW SITE
+                    </div>
+                    <div class="exitBtn" (click)="closeModal()">
+                        X
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sectionProject" #sectionProject>
+            <!-- <div *ngFor="let project of arrayProject; index as i" (mouseenter)="mouseEnter(i)" (mouseleave)="mouseOut(i)" class="singleProject"
+             id="moz{{i}}"> -->
+            <div *ngFor="let project of arrayProject; index as i" (mouseenter)="this.project.show=true;"
+                (mouseleave)="this.project.show=false" class="singleProject" id="singleProject" #singleProject>
+                <div class="moz" *ngIf="this.project.show === false">
+                    <!-- {{project.img[0].imgLink}} -->
+                    <img *ngIf="this.project.show === false" class="img" src={{project.mozImg}}>
+                </div>
+                <div class="container" *ngIf="this.project.show === true">
+                    <div class="titleSingleProject">
+                        {{project.name}}
+                    </div>
+                    <div class="imgSingleProject">
+                        {{project.tech}}
+                    </div>
+                    <div class="learnMore" id="learnMore" #learnMore (click)="openModal(i); slickModal.slickGoTo(0)">
+                        LEARN MORE
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

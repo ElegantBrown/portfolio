@@ -1,0 +1,49 @@
+.contact{
+    min-height: 100vh;
+    // display: flex;
+    // justify-content: center;
+    // flex-direction: column;
+    .wrapper{
+        // .title{
+        //     // margin-top: 60px;
+        //     padding-top: 80px;
+        //     padding-bottom: 60px;
+        //     display: flex;
+        //     justify-content: center;
+        // }
+        #titleForm{
+            padding-top: 30px;
+            padding-bottom: 60px;
+            display: flex;
+            justify-content: center;
+        }
+        .formWrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+
+            .form{
+                .nameInput{
+                    color: blue;
+                    border: black 1px solid;
+                    border-radius: 2px;
+                    
+                };
+                .emailInput{
+
+                };
+                .msgInput{
+                    min-width: 80%;
+                    min-height: 200px;
+                };
+                ::placeholder{
+                    color: black;
+                };
+                
+            }
+        }
+        
+    }
+    
+}

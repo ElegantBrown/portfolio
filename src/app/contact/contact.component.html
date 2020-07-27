@@ -1,0 +1,37 @@
+<div class="contact" id="contact">
+    <div class="wrapper">
+        <div class="title" id="titleContact">
+            <a>
+                CONTACT
+            </a>
+        </div>
+        <div id="titleForm">
+            Have a question or want to work together ?
+        </div>
+        <div class=formWrapper>
+            <!-- <div *ngIf="this.msgError">
+                Thx to put a name plz
+            </div> -->
+            <div *ngIf="this.msgSend">
+                Thx for your time, your message has been send, I'll contact you asap
+            </div>
+            <form [formGroup]="myForm" class="form">
+                <label>
+                    <input type="text" class="nameInput" #nameInput formControlName="name"
+                        [placeholder]="this.placeHolderName">
+                </label>
+                <label>
+                    <input type="email" class="emailInput" #emailInput formControlName="email"
+                        [placeholder]="this.placeHolderEmail">
+                </label>
+                <label>
+                    <textarea class="msgInput" #msgInput formControlName="msg"
+                        [placeholder]="this.placeHolderText"></textarea>
+                </label>
+                <label>
+                    <button type="submit" (click)="doSubmit()"> SUBMIT </button>
+                </label>
+            </form>
+        </div>
+    </div>
+</div>

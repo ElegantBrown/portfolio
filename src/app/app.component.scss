@@ -1,0 +1,195 @@
+// -----------------------------------------------------------------
+// keyframes animations 
+// -----------------------------------------------------------------
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(300%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(300%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-300%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideSpinIn { 
+    0% { 
+        transform: translateX(400%) translateY(-400%) rotate(0deg);
+    }
+    25% { 
+        transform: translateX(300%) translateY(-300%) rotate(45deg);
+    }
+    50%{
+        transform: translateX(200%) translateY(-200%) rotate(0deg);
+    }
+    75%{
+        transform: translateX(100%) translateY(-100%) rotate(-45deg);
+    }
+    100%{
+        transform: translateX(-100%) translateY(0%) rotate(0deg);
+    }
+}
+
+@keyframes spinOut { 
+    0% { 
+        transform: translateX(0%) rotate(-0deg);
+    }
+    25% { 
+        transform: translateX(-100%) rotate(-90deg);
+    }
+    50%{
+        transform: translateX(-200%) rotate(-180deg);
+    }
+    75%{
+        transform: translateX(-300%)  rotate(-270deg);
+    }
+    100%{
+        transform: translateX(-1000%) rotate(-360deg);
+    }
+}
+
+@keyframes zoomIn{
+    0% { 
+        transform: scale(0) ;
+    }
+    25% { 
+        transform: scale(0.25) ;
+    }
+    50%{
+        transform: scale(0.50);
+    }
+    75%{
+        transform: scale(0.75);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomOut{
+    0% { 
+        transform: scale(1) ;
+    }
+    25% { 
+        transform: scale(0.75) ;
+    }
+    50%{
+        transform: scale(0.50);
+    }
+    75%{
+        transform: scale(0.25);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:0.5;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-moz-keyframes fadeIn { /* Firefox */
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:0.5;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fadeIn { /* Safari and Chrome */
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:0.5;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+// @-o-keyframes fadein { /* Opera */
+//     from {
+//         opacity:0;
+//     }
+//     to {
+//         opacity: 1;
+//     }
+// }
+
+
+    /* The typing effect */
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+    
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: white; }
+    }
+
+    @-webkit-keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+    }
+
+    @-moz-keyframes blink{
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+
+    @keyframes blink{
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+
+    @keyframes fadeInTest {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          visibility: visible;
+          opacity: 1;
+        }
+      }

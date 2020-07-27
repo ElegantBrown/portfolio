@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+
+//---------------------------------------------------------------------//
+//  Variables
+//---------------------------------------------------------------------//
+
+$primaryColor : red;
+$primaryColor : green;
+$highlightColor : rgba(9, 230, 35, 0.76);
+$boldFont :  Helvetica, sans-serif;
+$italicFont :  Helvetica, sans-serif;
+$titleFontSizePc : 24px ;
+$titleFontSizePh : 12px ;
+$fontSizePc : 12px ;
+$fontSizePh : 0.85em;
+
+
+//---------------------------------------------------------------------//
+//   Global SCSS
+//---------------------------------------------------------------------//
+
+html, body{
+    margin:0px;
+    min-height: 100vh;
+    min-width: 100vw;
+    // border: solid 1px green;
+    // overflow: hidden;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.title{
+    padding-top: 12vh;
+    padding-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    animation: 4s ease-out 0s 1 slideInFromLeft;
+}
+
+.scrollIcon{
+    z-index: 99;
+}
+
+
+@media (min-width:320px)  { 
+    /* smartphones, iPhone, portrait 480x320 phones */ 
+    html, body{
+        font-size : $fontSizePh;
+    }
+}
+@media (min-width:481px)  { 
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+}
+@media (min-width:641px)  { 
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+}
+@media (min-width:961px)  { 
+    /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+}
+@media (min-width:1025px) { 
+    /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
