@@ -41,7 +41,7 @@ export class ContactComponent implements OnInit {
     console.log("myForm : ",this.myForm, "status : ", this.myForm.status);
     switch (this.myForm.status) {
       case "INVALID" :
-            //   //No name given
+      //No name given
       if(this.myForm.controls.name.status === "INVALID" ) {
         this.placeHolderName = "You forgot to enter a name !";
         this.nameInput.nativeElement.style.border="solid 2px red";
@@ -58,15 +58,23 @@ export class ContactComponent implements OnInit {
       };
         break;
 
+      //default form is valid
       default:
+        //show message to inform user that email has been sent
         this.msgSend = true;
         this.resetForm();
         console.log("myForm after resetform() : ",this.myForm, "status : ", this.myForm.status);
         break;
-    };
-    
-    
+    }; 
   };
+
+  foo(){
+    let git_status= ()=>{
+      console.log("hello world !");
+    };
+  };
+  
+
 
   resetForm(){
     this.nameInput.nativeElement.style.border="solid 1px black"

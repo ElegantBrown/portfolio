@@ -24,6 +24,9 @@
             text-align: center;
 
             .form{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
                 .nameInput{
                     color: blue;
                     border: black 1px solid;

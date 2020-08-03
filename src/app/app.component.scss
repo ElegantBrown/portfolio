@@ -20,12 +20,42 @@
     }
 }
 
+@keyframes showIt {
+    0% {
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hideIt {
+    0% {
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
 @keyframes slideInFromBottom {
     0% {
         transform: translateY(300%);
+        opacity: 0;
     }
+
+    90%{
+        
+         transform: translateY(300%);
+         opacity: 0;
+    }
+
     100% {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 

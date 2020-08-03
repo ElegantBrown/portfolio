@@ -9,18 +9,20 @@ div.nav{
     height: 9vh;
     min-width: 100vw;
 
-    // padding-top: 1%;
-    // padding: 5% 0px 5% 0px;
-
     position: -webkit-sticky;
     position: -moz-sticky;
     position: -ms-sticky;
     position: -o-sticky;
     position: sticky;
-    top: 0;
+    // top: 0;
+    bottom: 0;
     border-bottom: solid 1vh rgba(9, 230, 35, 1);
+    animation:
+        showIt 10s,
+        slideInFromBottom 12s
+    ;
     // animation: slideInFromBottom 3s;
-    // animation-delay: 18s;
+    // animation-delay: 3s;
 
     .btn{
         display: flex;
