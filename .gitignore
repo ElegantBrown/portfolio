@@ -42,7 +42,7 @@ testem.log
 /typings
 
 # Environment
-/src/environment/environment.prod.ts
+/environment.prod.ts
 
 # System Files
 .DS_Store
